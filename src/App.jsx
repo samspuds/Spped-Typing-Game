@@ -2,7 +2,7 @@ import React from "react"
 
 function App() {
        return(
-            <div className="App">
+            <div>
                 <h1>How fast do you type?</h1>
                 <textarea />
                 <h4>Time reminaing: ???</h4>
