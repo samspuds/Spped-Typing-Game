@@ -2,7 +2,9 @@
   background-color: #252525;
 }
 
-html
+html, body {
+
+}
 
 .App {
   background-color: #252525;
@@ -11,4 +13,12 @@ html
 
 button{
   color:#fff
+}
+
+h1 {
+
+}
+
+textarea {
+  
 }
