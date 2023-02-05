@@ -4,4 +4,9 @@
 
 .App {
   background-color: #252525;
+  color: #fff;
+}
+
+button{
+  color:#fff
 }
