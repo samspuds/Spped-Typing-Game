@@ -1,8 +1,10 @@
 import React, { useEffect } from "react"
 
 function App() {
+      const STARTING_TIME = 10
+
       const[text, setText] = React.useState("")
-      const[timer, setTimer] = React.useState(10)
+      const[timer, setTimer] = React.useState(STARTING_TIME)
       const[isTimeRunning, setIsTimeRunning] = React.useState(false)
       const[wordCount, setWordCount] = React.useState(0)
 
@@ -17,7 +19,7 @@ function App() {
       }
 
       function gameReset(){
-        setTimer(10)
+        setTimer(STARTING_TIME)
         setText("")
         setIsTimeRunning(true)
       }
