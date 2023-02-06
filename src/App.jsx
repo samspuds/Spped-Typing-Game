@@ -46,7 +46,7 @@ function App() {
                   onChange={handleChange}
                 />
                 <h4>Time remaining: {timer}</h4>
-                <button onClick={gameReset}>Start</button>
+                <button onClick={gameReset} disabled={isTimeRunning}>Start</button>
                 <h1>Word count: {wordCount}</h1>
             </div>
         )
