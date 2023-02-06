@@ -2,6 +2,7 @@ import React from "react"
 
 function App() {
       const[text, setText] = React.useState("")
+      const[timer, setTimer] = React.useState(10)
 
       function handleChange(e){
         const{value, name} = e.target
@@ -22,8 +23,8 @@ function App() {
                   value={text}
                   onChange={handleChange}
                 />
-                <h4>Time remaining: ???</h4>
-                <button onClick={() => wordCount(text) }</button>)}>Start</button>
+                <h4>Time remaining: {timer}</h4>
+                <button onClick={() => wordCount(text) }>Start</button>
                 <h1>Word count: ???</h1>
             </div>
         )
