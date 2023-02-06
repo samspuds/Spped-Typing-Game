@@ -16,6 +16,12 @@ function App() {
         return wordArr.filter(word => word !== "").length
       }
 
+      function gameReset(){
+        setTimer(10)
+        setText("")
+        setIsTimeRunning(true)
+      }
+
       useEffect(() => {
         if(isTimeRunning && timer > 0){
           setTimeout(() => {
@@ -38,7 +44,7 @@ function App() {
                   onChange={handleChange}
                 />
                 <h4>Time remaining: {timer}</h4>
-                <button onClick={() => setIsTimeRunning(true) }>Start</button>
+                <button onClick={gameReset}>Start</button>
                 <h1>Word count: {wordCount}</h1>
             </div>
         )
