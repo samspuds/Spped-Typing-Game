@@ -44,6 +44,7 @@ function App() {
                   name="text"
                   value={text}
                   onChange={handleChange}
+                  disabled={!isTimeRunning}
                 />
                 <h4>Time remaining: {timer}</h4>
                 <button onClick={gameReset} disabled={isTimeRunning}>Start</button>
