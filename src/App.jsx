@@ -4,13 +4,14 @@ function App() {
       const[text, setText] = React.useState("")
       const[timer, setTimer] = React.useState(10)
       const[isTimeRunning, setIsTimeRunning] = React.useState(false)
+      const[wordCount, setWordCount] = React.useState(0)
 
       function handleChange(e){
         const{value, name} = e.target
         setText(value)
       }
 
-      function wordCount(text){
+      function calculateWordCount(text){
         const wordArr = text.split(" ")
         return wordArr.filter(word => word !== "").length
       }
@@ -22,6 +23,7 @@ function App() {
             }, 1000)
           } else if(timer === 0){
             setIsTimeRunning(false)
+            setWordCount(calculateWordCount(text))
           }
 
       }, [timer, isTimeRunning])
@@ -37,7 +39,7 @@ function App() {
                 />
                 <h4>Time remaining: {timer}</h4>
                 <button onClick={() => setIsTimeRunning(true) }>Start</button>
-                <h1>Word count: ???</h1>
+                <h1>Word count: {wordCount}</h1>
             </div>
         )
 }
