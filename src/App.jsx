@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 
 function App() {
-      const STARTING_TIME = 10
+      const STARTING_TIME = 8
 
       const[text, setText] = React.useState("")
       const[timer, setTimer] = React.useState(STARTING_TIME)
