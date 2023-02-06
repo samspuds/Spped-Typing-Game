@@ -3,6 +3,7 @@ import React, { useEffect } from "react"
 function App() {
       const[text, setText] = React.useState("")
       const[timer, setTimer] = React.useState(10)
+      const[isTimeRunning, setIsTimeRunning] = React.useState(false)
 
       function handleChange(e){
         const{value, name} = e.target
@@ -15,13 +16,15 @@ function App() {
       }
 
       useEffect(() => {
+        if(isTimeRunning && timer > 0){
           setTimeout(() => {
-            if(timer <= 0){
-              return timer === 0 
-            }
-            setTimer(time => time - 1)
-          }, 1000)
-      }, [timer])
+              setTimer(time => time - 1)
+            }, 1000)
+          } else if(timer === 0){
+            setIsTimeRunning(false)
+          }
+
+      }, [timer, isTimeRunning])
 
        return(
             <div>
@@ -33,7 +36,7 @@ function App() {
                   onChange={handleChange}
                 />
                 <h4>Time remaining: {timer}</h4>
-                <button onClick={() => wordCount(text) }>Start</button>
+                <button onClick={() => setIsTimeRunning(true) }>Start</button>
                 <h1>Word count: ???</h1>
             </div>
         )
