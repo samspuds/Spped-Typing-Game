@@ -1,13 +1,13 @@
-import { useEffect, useRef} from "react"
+import { useState useEffect, useRef} from "react"
 
 function useTypingGame(){
 
     const STARTING_TIME = 8
     
-    const[text, setText] = React.useState("")
-    const[timer, setTimer] = React.useState(STARTING_TIME)
-    const[isTimeRunning, setIsTimeRunning] = React.useState(false)
-    const[wordCount, setWordCount] = React.useState(0)
+    const[text, setText] = useState("")
+    const[timer, setTimer] = useState(STARTING_TIME)
+    const[isTimeRunning, setIsTimeRunning] = useState(false)
+    const[wordCount, setWordCount] = useState(0)
     const textBoxRef = useRef(null)
     
     function handleChange(e){
