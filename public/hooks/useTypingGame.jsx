@@ -2,7 +2,7 @@ import { useState, useEffect, useRef} from "react"
 
 function useTypingGame(){
 
-    const STARTING_TIME = 8
+    const STARTING_TIME = 15
     
     const[text, setText] = useState("")
     const[timer, setTimer] = useState(STARTING_TIME)
