@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import React from "react"
 import useTypingGame from "../public/hooks/useTypingGame"
 
 function App() {
